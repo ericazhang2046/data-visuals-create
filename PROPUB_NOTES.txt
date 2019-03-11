@@ -1,0 +1,16 @@
+# moving SCSS in
+# from: https://github.com/propublica/newsapps-style/tree/master/assets/css
+cp -R newsapps-style/assets/css/* templates/__common__/app/styles/
+
+# moving fonts in
+cp -R newsapps-style/fonts/* templates/__common__/app/assets/fonts/
+
+# EDIT the fonts.scss file to point to the new font locations
+../../assets/fonts/FONT.FORMAT
+
+# moving graphic wrap in
+# graphics layout 2018: https://github.com/propublica/graphics/blob/master/views/2018/layout_2018.erb
+
+# moving legacy JS in
+cp graphics/public/javascripts/common/propub-layout/*.js templates/__common__/app/assets/legacy-js/
+cp graphics/public/javascripts/common/socialsnippet.js templates/__common__/app/assets/legacy-js/

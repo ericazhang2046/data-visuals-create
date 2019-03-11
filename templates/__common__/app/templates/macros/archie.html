@@ -1,0 +1,6 @@
+{% macro split_grafs(text) %}
+  {% set grafs = text.split("\n\n") %}
+  {% for graf in grafs %}
+    <p class="graphic-prose">{{ graf }}</p>
+  {% endfor %}
+{% endmacro %}

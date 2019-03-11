@@ -7,6 +7,12 @@
   <a href="https://david-dm.org/texastribune/data-visuals-create/?type=dev"><img src="https://david-dm.org/texastribune/data-visuals-create/dev-status.svg" alt="devDependencies"></a>
 </p>
 
+## ProPublica notes
+
+* Clone the project, use the `propublica` branch
+* Run `npm link`
+* To make a new graphic, us `data-visuals-create graphic yourgraphicname`
+
 A tool for generating the scaffolding needed to create a graphic or feature the Data Visuals way.
 
 ## Key features

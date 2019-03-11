@@ -1,0 +1,262 @@
+// Instantiate josef on a few elements
+@include grid( pg-main );
+@include grid( group );
+
+// Self-clear our josef’d elements
+.pg-main,
+.group {
+    @include clearfix;
+}
+
+// Primary content layout blocks
+.pg-main > *,
+.subnav-inner {
+    @include breakpoint-min( sm ) {
+        margin-left: auto;
+        margin-right: auto;
+        width: colspan( 4, 6 );
+    }
+    @include breakpoint-min( md ) {
+        width: colspan( 6, 8 );
+    }
+    @include breakpoint-min( lg ) {
+        width: colspan( 8, 12 );
+    }
+}
+
+// News app specific margins override.
+.pg-main.newsapp > *,
+.subnav-inner {
+    @include breakpoint-min( sm ) {
+        margin-left: auto;
+        margin-right: auto;
+        width: colspan( 6, 6 );
+    }
+    @include breakpoint-min( md ) {
+        width: colspan( 8, 8 );
+    }
+    @include breakpoint-min( lg ) {
+        width: colspan( 12, 12 );
+    }
+}
+
+.pg-main > .medium {
+    margin-left: 0;
+    width: 100%;
+    @include breakpoint-min( lg ) {
+        margin-left: auto;
+        margin-right: auto;
+        width: colspan( 10, 12 );
+    }
+}
+.pg-main > .full {
+    margin-left: 0;
+    width: 100%;
+}
+
+
+
+/*
+
+In-page grid blocks
+
+*/
+.group > * {
+    margin-bottom: $scale-6;
+    @include breakpoint-min( md ) {
+        float: left;
+        width: 100%;
+    }
+}
+/*
+3×3 layout
+*/
+.l-30s > .col {
+    @include breakpoint-min( md ) {
+        width: colspan( 2, 6 );
+        margin-right: colspan( g, 6 );
+        &:nth-child( 3n ) {
+            margin-right: 0;
+        }
+    }
+    @include breakpoint-min( lg ) {
+        width: colspan( 8/3, 8 );
+        &:nth-child( n ) {
+            margin-right: colspan( g, 8 );
+        }
+        &:nth-child( 3n ) {
+            margin-right: 0;
+        }
+    }
+}
+.full.l-30s > .col {
+    @include breakpoint-min( md ) {
+        width: colspan( 4, 8 );
+        margin-right: colspan( g, 8 );
+        &:nth-child( 2n ) {
+            margin-right: 0;
+        }
+    }
+    @include breakpoint-min( lg ) {
+        width: colspan( 4, 12 );
+        &:nth-child( n ) {
+            margin-right: colspan( g, 12 );
+        }
+        &:nth-child( 3n ) {
+            margin-right: 0;
+        }
+    }
+}
+/*
+25%/75% layout (can be reversed to 75%/25%, too)
+*/
+.l-25-75 > .col {
+    @include breakpoint-min( md ) {
+        width: colspan( 3, 6 );
+        margin-right: colspan( g, 6 );
+        &:nth-child( 2n ) {
+            margin-right: 0;
+        }
+    }
+    @include breakpoint-min( lg ) {
+        &:nth-child( n ) {
+            margin-right: colspan( g, 8 );
+        }
+        &:nth-child( 2n ) {
+            margin-right: 0;
+        }
+    }
+}
+.l-25-75 .p-more {
+    @include breakpoint-min( lg ) {
+        width: colspan( 6, 8 );
+    }
+}
+.l-25-75 .p-less {
+    @include breakpoint-min( lg ) {
+        width: colspan( 2, 8 );
+    }
+}
+.medium.l-25-75 > .col {
+    @include breakpoint-min( md ) {
+        width: colspan( 4, 8 );
+        margin-right: colspan( g, 8 );
+        &:nth-child( 2n ) {
+            margin-right: 0;
+        }
+    }
+    @include breakpoint-min( lg ) {
+        &:nth-child( n ) {
+            margin-right: colspan( g, 10 );
+        }
+        &:nth-child( 2n ) {
+            margin-right: 0;
+        }
+    }
+}
+.medium.l-25-75 .p-more {
+    @include breakpoint-min( md ) {
+        width: colspan( 5, 8 );
+    }
+    @include breakpoint-min( lg ) {
+        width: colspan( 7, 10 );
+    }
+}
+.medium.l-25-75 .p-less {
+    @include breakpoint-min( md ) {
+        width: colspan( 3, 8 );
+    }
+    @include breakpoint-min( lg ) {
+        width: colspan( 3, 10 );
+    }
+}
+.full.l-25-75 > .col {
+    @include breakpoint-min( md ) {
+        width: colspan( 4, 8 );
+        margin-right: colspan( g, 8 );
+        &:nth-child( 2n ) {
+            margin-right: 0;
+        }
+    }
+    @include breakpoint-min( lg ) {
+        &:nth-child( n ) {
+            margin-right: colspan( g, 12 );
+        }
+        &:nth-child( 2n ) {
+            margin-right: 0;
+        }
+    }
+}
+.full.l-25-75 .p-more {
+    @include breakpoint-min( md ) {
+        width: colspan( 5, 8 );
+    }
+    @include breakpoint-min( lg ) {
+        width: colspan( 9, 12 );
+    }
+}
+.full.l-25-75 .p-less {
+    @include breakpoint-min( md ) {
+        width: colspan( 3, 8 );
+    }
+    @include breakpoint-min( lg ) {
+        width: colspan( 3, 12 );
+    }
+}
+/*
+50%/50% layout
+*/
+.l-50s > .col {
+    @include breakpoint-min( md ) {
+        width: colspan( 3, 6 );
+        margin-right: colspan( g, 6 );
+        &:nth-child( 2n ) {
+            margin-right: 0;
+        }
+    }
+    @include breakpoint-min( lg ) {
+        width: colspan( 4, 8 );
+        &:nth-child( n ) {
+            margin-right: colspan( g, 8 );
+        }
+        &:nth-child( 2n ) {
+            margin-right: 0;
+        }
+    }
+}
+.medium.l-50s > .col {
+    @include breakpoint-min( md ) {
+        width: colspan( 4, 8 );
+        margin-right: colspan( g, 8 );
+        &:nth-child( 2n ) {
+            margin-right: 0;
+        }
+    }
+    @include breakpoint-min( lg ) {
+        width: colspan( 5, 10 );
+        &:nth-child( n ) {
+            margin-right: colspan( g, 10 );
+        }
+        &:nth-child( 2n ) {
+            margin-right: 0;
+        }
+    }
+}
+.full.l-50s > .col {
+    @include breakpoint-min( md ) {
+        width: colspan( 4, 8 );
+        margin-right: colspan( g, 8 );
+        &:nth-child( 2n ) {
+            margin-right: 0;
+        }
+    }
+    @include breakpoint-min( lg ) {
+        width: colspan( 6, 12 );
+        &:nth-child( n ) {
+            margin-right: colspan( g, 12 );
+        }
+        &:nth-child( 2n ) {
+            margin-right: 0;
+        }
+    }
+}

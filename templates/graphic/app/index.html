@@ -1,19 +1,26 @@
 {% extends 'base.html' %}
+{% import 'macros/archie.html' as archie %}
 
+{% set logo = 'hq' %}
 {% set jsPackName = 'main' %}
 {% set context = data.text %}
+{% set series = 'TESTSERIES' %}
 
 {% block content %}
-<div class="app">
-  <h1 class="graphic-title">{{ context.title }}</h1>
-  <p class="graphic-prose">{{ context.prose }}</p>
-  <div id="graphic" class="graphic"></div>
-  <ul class="graphic-footer">
-    {% if context.note %}<li>Note: {{ context.note }}</li>{% endif %}
-    {% if context.source %}<li>Source: {{ context.source }}</li>{% endif %}
-    {% if context.credit %}<li>Credit: {{ context.credit }}</li>{% endif %}
-  </ul>
-</div>
+  <main>    
+    <div class="pg-main">
+      <!-- CONTENT START -->
+        <h1 class="graphic-title">{{ context.title }}</h1>
+        {{ archie.split_grafs(context.prose) }}
+        <div id="graphic" class="graphic"></div>
+        <ul class="graphic-footer">
+          {% if context.note %}<li>Note: {{ context.note }}</li>{% endif %}
+          {% if context.source %}<li>Source: {{ context.source }}</li>{% endif %}
+          {% if context.credit %}<li>Credit: {{ context.credit }}</li>{% endif %}
+        </ul>
+      <!-- CONTENT END -->
+    </div><!-- /end .pg-main -->
+  </main>
 {% endblock content %}
 
 {% block inline_data %}

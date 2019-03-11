@@ -1,0 +1,56 @@
+/* Color variables */
+
+// The default body background color.
+$default--bg: #fff;
+
+// The default body background color.
+$default--color: #333;
+
+// The background color for “boxed” forms.
+$app-form--bg: #E9F0F8;
+
+// The color for “Feltron” numbers.
+$number--color: #E49C26;
+
+// Colors for table header backgrounds, and table borders.
+$table-header--bg: #F5F4F3;
+$table-locked--border: #D8D6D3;
+
+// Colors for the masthead
+$mast-bg--light: #f0efee;
+$mast-text--light: $default--color;
+
+$mast-bg--dark: $default--color;
+$mast-text--dark: $default--bg;
+
+// If the masthead is fixed, change the colors on scroll
+$mast-bg--light--scrolling: rgba( 247, 247, 247, 0.9 );
+$mast-text--light--scrolling: $default--color;
+$mast-bg--dark--scrolling: lighten( $default--color, 50% );
+$mast-text--dark--scrolling: $default--bg;
+
+// Colors for form elements
+$btn--bg: #444;
+$btn--bg--active: lighten( $btn--bg, 10% );
+$btn--text: #FFF;
+$btn--text--active: #FFF;
+
+
+/* Miscellaneous variables/configuration */
+
+/*
+$subnav--height
+===============
+Determines the minimum viewport height required to make the subnav scroll. (Otherwise, long menus might extend off the bottom of the screen.) If the subnav is considerably longer than the demo, increase this measurement; if it’s shorter, feel free to decrease it.
+*/
+$subnav--height: "41em";
+
+/*
+$table-shortened--height
+========================
+Sets the height for “shortened” tables, which clips the visible area allotted to a table, with overflow scrolling to browse the entire table.
+
+If viewport units are used (e.g., `40vh`), we recommend setting a fallback height in `em` or `px` for older devices/browsers.
+*/
+$table-shortened--height: 40vh;
+$table-shortened--height-fallback: 20em;

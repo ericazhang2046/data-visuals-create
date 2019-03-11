@@ -1,0 +1,10 @@
+.Header {
+    background-color: #304154;
+}
+a {
+    color: #217CE3;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+}
