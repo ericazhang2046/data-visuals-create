@@ -11,7 +11,10 @@
 
 * Clone the project, use the `propublica` branch
 * Run `npm link`
+* Then `cd ..`
 * To make a new graphic, us `data-visuals-create graphic yourgraphicname`
+* `cd yourgraphicname-SOMETIMESTAMP`
+* `npm run serve`
 
 A tool for generating the scaffolding needed to create a graphic or feature the Data Visuals way.
 
