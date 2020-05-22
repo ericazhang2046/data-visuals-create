@@ -5,9 +5,21 @@ module.exports = {
    */
   id: '<<id>>',
   /**
+   * Month that the project was created.
+   */
+  createMonth: '<<month>>',
+  /**
+   * Year that the project was created.
+   */
+  createYear: '<<year>>',
+  /**
    * What project type was passed in on creation.
    */
   projectType: 'graphic',
+  /**
+   * What slug was passed in on creation.
+   */
+  slug: '<<slug>>',
   /**
    * The destination S3 bucket for a deploy.
    */
@@ -15,7 +27,7 @@ module.exports = {
   /**
    * The folder (or "Key" in S3 lingo) to deploy the project into.
    */
-  folder: 'graphics/<<slug>>-<<year>>-<<month>>',
+  folder: '<<slug>>',
   /**
    * The S3 bucket that's used to store raw asset and workspace files.
    */
