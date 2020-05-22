@@ -11,7 +11,7 @@ module.exports = {
   /**
    * The destination S3 bucket for a deploy.
    */
-  bucket: 'graphics.texastribune.org',
+  bucket: 'pp-projects-static',
   /**
    * The folder (or "Key" in S3 lingo) to deploy the project into.
    */
@@ -19,7 +19,7 @@ module.exports = {
   /**
    * The S3 bucket that's used to store raw asset and workspace files.
    */
-  assetsBucket: 'data-visuals-raw-assets',
+  assetsBucket: 'pp-projects-static',
   /**
    * Any Google Doc and Google Sheet files to be synced with this project.
    */
