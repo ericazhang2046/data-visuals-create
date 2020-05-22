@@ -81,14 +81,14 @@
 
             <ul class="nav-social-menu">
               <li class="nav-social-item">
-                <a class="nav-social-link social-intent fb" data-title="{{ context['hed'] }}" data-desc="{{context['dek'] }}" data-img="{{ staticAbsolute(context['fb_img']) }}" href="#">
+                <a class="nav-social-link social-intent fb" data-title="{{ context['hed'] }}" data-url="{{ context['url'] }}"data-desc="{{context['dek'] }}" data-img="{{ context['fb_img_url'] }}" href="#">
                   <svg class="icon" width="24" height="24">
                     <use xlink:href="#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
               <li class="nav-social-item">
-                <a class="nav-social-link social-intent tw" data-txt="{{ context['hed'] }}" data-hashtag="" data-url="{{ context['url'] }}" data-img="{{ staticAbsolute(context['twitter_img']) }}" href="#">
+                <a class="nav-social-link social-intent tw" data-txt="{{ context['dek'] }}" data-hashtag="" data-url="{{ context['url'] }}" data-img="{{ context['twitter_img_url'] }}" href="#">
                   <svg class="icon" width="24" height="24">
                     <use xlink:href="#icon-twitter"></use>
                   </svg>
