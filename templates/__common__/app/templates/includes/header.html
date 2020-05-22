@@ -80,7 +80,28 @@
             {{ series }}
 
             <ul class="nav-social-menu">
-              {{ social }}
+              <li class="nav-social-item">
+                <a class="nav-social-link social-intent fb" data-title="{{ context['hed'] }}" data-desc="{{context['dek'] }}" data-img="{{ staticAbsolute(context['fb_img']) }}" href="#">
+                  <svg class="icon" width="24" height="24">
+                    <use xlink:href="#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="nav-social-item">
+                <a class="nav-social-link social-intent tw" data-txt="{{ context['hed'] }}" data-hashtag="" data-url="{{ context['url'] }}" data-img="{{ staticAbsolute(context['twitter_img']) }}" href="#">
+                  <svg class="icon" width="24" height="24">
+                    <use xlink:href="#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="nav-social-item nav-email-item">
+                  <a class="nav-social-link" href="https://go.propublica.org/sign-up">
+                      <svg class="icon" width="24" height="24">
+                          <use xlink:href="#icon-email"></use>
+                      </svg>
+                      <span class="icon-label">Sign Up</span>
+                  </a>
+              </li>
             </ul><!-- /end .nav-social-menu -->
 
             <a class="link-pp-donate" href="<%= donate %>">Donate</a>
